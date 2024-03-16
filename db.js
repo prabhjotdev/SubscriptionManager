@@ -3,6 +3,16 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
+//Dd create table
+// Create Table Subscriptions (
+// 	Id int auto_increment primary key,
+//     Name VARCHAR(255) NOT NULL,
+//     Cost Float CHECK(Cost >=0),
+//     BillingPeriod VARCHAR(20) DEFAULT 'Annual' CHECK(BillingPeriod IN ('Annual','Bi-Annual','Monthly','Bi-Weekly','Weekly','Daily')),
+// 	NextBillingDate DATE NOT NULL,
+//     Status VARCHAR(10) DEFAULT 'Active' CHECK(Status IN ('Active', 'InActive'))
+// );
+
 const db = mysql.createConnection({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
